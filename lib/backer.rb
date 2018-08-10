@@ -10,7 +10,7 @@ class Backer
   
   def back_project(project)
     project = Project.new(project)
-    self.backed_projects << project.title unless self.backed_projects.include?(project.title)
+    self.backed_projects << project.title unless self.backed_projects.include?(project)
     project.backers << self.name 
    
   end
