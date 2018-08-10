@@ -11,6 +11,5 @@ class Project
     new_backer = Backer.new(backer)
     self.backers << new_backer.name unless self.backers.include?(new_backer.name)
     new_backer.backed_projects << self.title unless new_backer.backed_projects.indclude?(self.title)
-    binding.pry
   end
 end
