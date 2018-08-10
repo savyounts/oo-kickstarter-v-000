@@ -10,6 +10,6 @@ class Backer
     project = Project.new(project)
     self.backed_projects << project.title unless self.backed_projects.include?(project.title)
     project.backers << self.name 
-   
+   binding.pry
   end
 end
