@@ -8,9 +8,9 @@ class Project
   end
   
   def add_backer(backer)
-    backer = Backer.new(backer)
-    self.backers << backer.name unless self.backers.include?(backer.name)
-    backer.backed_projects << self.title
+    new_backer = Backer.new(backer)
+    self.backers << new_backer.name unless self.backers.include?(new_backer.name)
+    new_backer.backed_projects << self.title
     binding.pry
   end
 end
